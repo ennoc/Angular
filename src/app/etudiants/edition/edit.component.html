@@ -1,0 +1,23 @@
+<section>
+  <form #form="ngForm" (submit)="submitChange(form)" >   <!--  ou (click)="submitAuth()" dans boutton se connecter -->
+    <label>Nom
+      <input type="text" name="nom" [(ngModel)]="etudiant.nom" placeholder="nom" />
+    </label>
+    <label>Prénom
+      <input type="text" name="prenom" [(ngModel)]="etudiant.prenom" placeholder="prénom" />
+    </label>
+    <br />
+    <label>Sexe
+      <input type="text" name="sexe" [(ngModel)]="etudiant.sexe" placeholder="sexe" />
+    </label>
+    <label>Age
+      <input type="number" name="age" [(ngModel)]="etudiant.age" placeholder="age" />
+    </label>
+    <br />
+    <label>Qualité(s) (à séparer par des ' ; ')
+      <input type="text" id='qualites' name="qualites" [(ngModel)]="qualites" placeholder="qualités" />
+    </label>
+    <br />
+    <input type="submit" value="Valider" />
+  </form>
+</section>
